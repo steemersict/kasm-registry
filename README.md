@@ -1,3 +1,9 @@
+> **Steemers Kasm Registry** — eigen registry (schema 1.1, Kasm 1.16–1.19) op `https://steemersict.github.io/kasm-registry/`.
+> Plak in Kasm (Admin → Workspaces → Workspaces Registry → Add new): `https://steemersict.github.io/kasm-registry/`
+>
+> **Bron:** de workspaces komen van het [LinuxServer.io Kasm-registry](https://kasmregistry.linuxserver.io) (`1.0/list.json`, Chromium en Firefox uit `1.1/list.json`), omgezet naar schema 1.1 met `scripts/import_linuxserver.py`. Sjabloon: [kasmtech/workspaces_registry_template](https://github.com/kasmtech/workspaces_registry_template). Images en iconen blijven van hun eigen makers.
+> Deploy: GitHub Actions → GitHub Pages (workflow `build-and-deploy.yml`).
+
 <h1 align="center">
   <br>
   <img width="150" src="https://user-images.githubusercontent.com/5698566/230345149-ef757e51-6eb9-479d-94f5-a13e4ad33b03.png">
