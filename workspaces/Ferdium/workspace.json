@@ -17,7 +17,7 @@
     {
       "version": "1.19.x",
       "image": "ghcr.io/steemersict/kasm-ferdium:latest",
-      "uncompressed_size_mb": 2300
+      "uncompressed_size_mb": 5401
     }
   ]
 }
