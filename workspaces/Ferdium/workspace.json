@@ -3,19 +3,21 @@
   "docker_registry": "https://ghcr.io/",
   "image_src": "ferdium.png",
   "run_config": {
-    "security_opt": ["seccomp=unconfined"],
-    "entrypoint": ["/kasminit"],
-    "user": 1000,
-    "environment": {"HOME": "/home/kasm-user"}
+    "hostname": "kasm"
   },
   "exec_config": {},
-  "categories": ["Communication"],
+  "categories": [
+    "Communication"
+  ],
   "friendly_name": "Ferdium",
-  "architecture": ["amd64"],
+  "architecture": [
+    "amd64"
+  ],
   "compatibility": [
-    {"version": "1.16.x", "image": "lscr.io/linuxserver/ferdium:latest", "uncompressed_size_mb": 2320},
-    {"version": "1.17.x", "image": "lscr.io/linuxserver/ferdium:latest", "uncompressed_size_mb": 2320},
-    {"version": "1.18.x", "image": "lscr.io/linuxserver/ferdium:latest", "uncompressed_size_mb": 2320},
-    {"version": "1.19.x", "image": "lscr.io/linuxserver/ferdium:latest", "uncompressed_size_mb": 2320}
+    {
+      "version": "1.19.x",
+      "image": "ghcr.io/steemersict/kasm-ferdium:latest",
+      "uncompressed_size_mb": 2300
+    }
   ]
 }

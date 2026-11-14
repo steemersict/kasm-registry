@@ -1,7 +1,7 @@
 > **Steemers Kasm Registry** — eigen registry (schema 1.1, Kasm 1.16–1.19) op `https://steemersict.github.io/kasm-registry/`.
 > Plak in Kasm (Admin → Workspaces → Workspaces Registry → Add new): `https://steemersict.github.io/kasm-registry/`
 >
-> **Bron:** de workspaces komen van het [LinuxServer.io Kasm-registry](https://kasmregistry.linuxserver.io) (`1.0/list.json`, Chromium en Firefox uit `1.1/list.json`), omgezet naar schema 1.1 met `scripts/import_linuxserver.py`. Sjabloon: [kasmtech/workspaces_registry_template](https://github.com/kasmtech/workspaces_registry_template). Images en iconen blijven van hun eigen makers.
+> **Inhoud:** alleen Ferdium, met een eigen Kasm-image (`images/ferdium`, gebouwd naar `ghcr.io/steemersict/kasm-ferdium`). De eerder overgenomen LinuxServer.io-items zijn verwijderd: hun images hebben geen Kasm-entrypoint (`/kasminit`) meer en starten niet. Sjabloon: [kasmtech/workspaces_registry_template](https://github.com/kasmtech/workspaces_registry_template).
 > Deploy: GitHub Actions → GitHub Pages (workflow `build-and-deploy.yml`).
 
 <h1 align="center">
