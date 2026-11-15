@@ -12,6 +12,7 @@ WORKDIR $HOME
 
 RUN set -eux; \
     apt-get update; \
+    apt-get install -y --no-install-recommends jq; \
     wget -q -O /tmp/ferdium.deb "https://github.com/ferdium/ferdium-app/releases/download/v${FERDIUM_VERSION}/Ferdium-linux-${FERDIUM_VERSION}-amd64.deb"; \
     echo "${FERDIUM_SHA256}  /tmp/ferdium.deb" | sha256sum -c -; \
     apt-get install -y /tmp/ferdium.deb; \

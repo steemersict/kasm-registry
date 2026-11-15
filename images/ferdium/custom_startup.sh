@@ -8,6 +8,16 @@ export MAXIMIZE_NAME="Ferdium"
 MAXIMIZE_SCRIPT=$STARTUPDIR/maximize_window.sh
 ARGS=${APP_ARGS:---no-sandbox}
 
+# Ferdium-server instelbaar via env (Kasm: Docker Run Config Override). Bron: Ferdium v7.2.3,
+# src/electron/Settings.ts + environment-remote.ts → $HOME/.config/Ferdium/config/settings.json, sleutel "server".
+# Zonder FERDIUM_SERVER verandert er niets; andere instellingen blijven behouden.
+if [ -n "$FERDIUM_SERVER" ]; then
+    SETTINGS="$HOME/.config/Ferdium/config/settings.json"
+    mkdir -p "$(dirname "$SETTINGS")"
+    [ -s "$SETTINGS" ] || echo '{}' > "$SETTINGS"
+    jq --arg s "$FERDIUM_SERVER" '.server = $s' "$SETTINGS" > "$SETTINGS.tmp" && mv "$SETTINGS.tmp" "$SETTINGS"
+fi
+
 if [ -z "$DISABLE_CUSTOM_STARTUP" ]; then
     set +x
     while true; do
